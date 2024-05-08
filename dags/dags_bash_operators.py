@@ -17,7 +17,7 @@ with DAG(
 
     bash_task2 = BashOperator(
         task_id="bash_task2",
-        bash_command="echo $HOSTNAME", # airflow worker의 컨테이너 아이디가 나올것
+        bash_command="echo $HOSTNAME", # airflow worker의 컨테이너 아이디가 나올것 -> 워커 컨테이너에서 실행이 된다는 뜻 
     )
 
     bash_task1 >> bash_task2

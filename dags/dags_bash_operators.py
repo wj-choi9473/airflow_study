@@ -12,12 +12,12 @@ with DAG(
 ) as dag:
     bash_task1 = BashOperator(
         task_id="bash_task1",
-        bash_command="echo whoami",
+        bash_command="echo hello world", #Logs를 보면 hello world가 output으로 나옴
     )
 
     bash_task2 = BashOperator(
         task_id="bash_task2",
-        bash_command="echo $HOSTNAME",
+        bash_command="echo $HOSTNAME", # airflow worker의 컨테이너 아이디가 나올것
     )
 
     bash_task1 >> bash_task2

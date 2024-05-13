@@ -1,3 +1,10 @@
+"""
+Macro 변수 사용 예시
+
+PythonOperator with task decorator 예시
+1. task using macros
+2. task 직접 날짜 계산
+"""
 from airflow import DAG
 import pendulum
 from airflow.decorators import task

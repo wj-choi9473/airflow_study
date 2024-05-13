@@ -1,3 +1,8 @@
+"""
+BashOperator 에서 Xcom 사용 예시
+
+env, bash_command 파라미터에서 Template 이용하여 push/pull
+"""
 from airflow import DAG
 import pendulum
 import datetime

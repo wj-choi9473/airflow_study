@@ -1,3 +1,16 @@
+"""
+Task group 설정
+
+- Task들의 모음, Task 그룹 안에 또 다른 task 그룹도 계층적으로 담을 수 있음
+- 관련 task끼리 그룹핑 하여 UI적으로 직관적 표현, 관리 용이
+- Task Group 간에도 Flow 정의가 가능
+- Group이 다르면 task_id가 같아도 무방합니다.
+- Tooltip 파라미터를 이용해 UI화면에서 Task group에 대한 설명 제공이 가능 (데커레이터 활용시 docstring)
+
+Task Group 작성 방법
+1. 데커레이터
+2. 클래스
+"""
 from airflow import DAG
 import pendulum
 import datetime
@@ -9,7 +22,7 @@ from airflow.utils.task_group import TaskGroup
 with DAG(
     dag_id="dags_python_with_task_group",
     schedule=None,
-    start_date=pendulum.datetime(2023, 4, 1, tz="Asia/Seoul"),
+    start_date=pendulum.datetime(2024, 5, 1, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
     def inner_func(**kwargs):

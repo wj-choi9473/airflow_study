@@ -1,3 +1,19 @@
+"""
+task decorator 사용 예시
+
+PythonOperator 대신 데코레이터 사용
+def python func1():
+    ...
+
+py_task_1 = PythonOperator(
+    Task_id="py_task1",
+    python_callable=python_func1
+)
+
+py_task_1
+```
+
+"""
 from airflow import DAG
 import pendulum
 from airflow.decorators import task

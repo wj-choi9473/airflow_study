@@ -1,3 +1,6 @@
+"""
+분기처리 예시 with task decorators
+"""
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.python import PythonOperator

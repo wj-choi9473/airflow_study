@@ -1,3 +1,6 @@
+"""
+분기처리 예시 with BaseBranchOperator
+"""
 from airflow import DAG
 import pendulum
 from airflow.operators.branch import BaseBranchOperator

@@ -1,3 +1,6 @@
+"""
+Bash Operator 예시
+"""
 from airflow import DAG
 import datetime
 import pendulum

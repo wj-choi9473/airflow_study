@@ -1,3 +1,6 @@
+"""
+Python&Bash Operator 간 Xcom 사용 예시
+"""
 from airflow import DAG
 import pendulum
 from airflow.decorators import task

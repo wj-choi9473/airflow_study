@@ -1,3 +1,15 @@
+"""
+Xcom 예시
+
+- Airflow DAG 안 Task 간 데이터 공유
+- 주로 작은 규모의 데이터 공유 (1GB 이상의 데이터 공유는 외부 솔루션 사용 필요 AWS S3, HDFS 등)
+
+방법1. **kwargs에 존재하는 ti(task_instance) 객체 활용
+방법2. 파이썬 함수의 return 값 활용
+
+- return을 하게되면 xcom에 저장함
+    - task 데코레이터 사용시 함수 입/출력 관계만으로 task flow 정의가 됨
+"""
 from airflow import DAG
 import pendulum
 import datetime
@@ -9,10 +21,10 @@ with DAG(
     start_date=pendulum.datetime(2024, 5, 1, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
-    
+    # 방법1 예시
     @task(task_id='python_xcom_push_task1')
     def xcom_push1(**kwargs):
-        ti = kwargs['ti']
+        ti = kwargs['ti'] 
         ti.xcom_push(key="result1", value="value_1")
         ti.xcom_push(key="result2", value=[1,2,3])
 

@@ -1,3 +1,13 @@
+"""
+op_args 사용 예시
+
+def op_args_test(name,age,*args):
+    print(f"이름: {name}")
+    print(f"나이: {age}")
+    print(f"기타: {args}")
+
+op_args=['wj',25,'kr','seoul'] 이와 같이 리스트로 입력
+"""
 from airflow import DAG
 import pendulum
 import datetime

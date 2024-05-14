@@ -1,6 +1,11 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,python
 
+# airflow setting
+airflow_venv
+config
+logs
+
 ### macOS ###
 # General
 .DS_Store
@@ -164,7 +169,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-airflow_venv
 
 # Spyder project settings
 .spyderproject

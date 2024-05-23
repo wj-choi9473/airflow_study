@@ -2,9 +2,14 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,python
 
 # airflow setting
-airflow_venv
-config
-logs
+airflow_venv/
+config/
+logs/
+
+# local venv
+.env
+# airflow test directory
+files/
 
 ### macOS ###
 # General
@@ -162,7 +167,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/

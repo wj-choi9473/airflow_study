@@ -1,5 +1,5 @@
 """
-Custom Operator
+Custom Operator 예시
 장점 
 - 원하는대로 로직
 - 서울 공공데이터 데이터셋 추출/저장 파이썬 파일을 여러번 만들어 PythonOperator을 만들면 이 자체로 비효율 

@@ -1,5 +1,5 @@
 '''
-Custom sensor operator예시
+Custom sensor operator 예시
 
 서울시 공공데이터 API 추출시 특정 날짜 컬럼을 조사하여 
 배치 날짜 기준 전날 데이터가 존재하는지 체크하는 센서 
